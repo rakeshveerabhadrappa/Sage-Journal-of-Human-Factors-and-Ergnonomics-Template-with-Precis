@@ -1,0 +1,203 @@
+\documentclass[Afour,sageh,times] {sagej}
+\usepackage{natbib}
+\usepackage{setspace}
+\usepackage[switch]{lineno}
+%\linenumbers
+\usepackage{moreverb,url}
+\usepackage{wrapfig}
+\usepackage{stfloats}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{url}
+
+\usepackage{tikz}
+\usetikzlibrary{calc, shapes, arrows, positioning}
+
+%##############################
+
+%\usepackage[skip=4pt]{caption}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{array}
+
+
+\makeatletter
+\newcommand{\armultirow}[3]{%
+	\multicolumn{#1}{#2}{%
+		\begin{picture}(0,0)%
+			\put(0,0){%
+				\begin{tabular}[t]{@{}#2@{}}%
+					#3%
+				\end{tabular}%
+			}%
+		\end{picture}%
+	}%
+}%
+
+\newcolumntype{f}{>{$}l<{$}}
+\newcolumntype{n}{l}
+\newcolumntype{N}{>{\normalsize}c}
+\newcolumntype{v}[1]{>{\raggedright\hspace{0pt}}p{#1}}
+\newcolumntype{V}[1]{>{\scriptsize\raggedright\hspace{0pt}}p{#1}}
+
+\newcolumntype{d}[1]{>{\DC@{.}{.}{#1}}l<{\DC@end}}
+%### Structured abstract rule ######################################
+
+\newcommand{\absdiv}[1]{%
+	\par\addvspace{.5\baselineskip}% adjust to suit
+	\normalsize\noindent\textbf{#1}\quad\ignorespaces
+}
+
+%### End Structured abstract rule ######################################
+
+
+\makeatother
+\usepackage{lipsum}  
+
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{colortbl}
+
+
+\graphicspath{{./Figures/}}
+\usepackage{textcomp}
+\usepackage{xcolor}
+
+
+
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\newcommand\BibTeX{{\rmfamily B\kern-.05em \textsc{i\kern-.025em b}\kern-.08em
+		T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\def\volumeyear{2020}
+
+\begin{document}
+	
+	\title{Title of the article}
+	%{\footnotesize \textsuperscript{*}Note: Sub-titles are not captured in Xplore and
+		%should not be used}
+	\author{FirstName LastName\affilnum{1}, 
+		FirstName LastName\affilnum{1}, 
+		FirstName LastName\affilnum{1}}
+	\affiliation{This work is supported by\\
+		\affilnum{1} Affiliation-1\\
+		\affilnum{2} Affiliation-2
+	}
+	
+	\corrauth{FirstName LastName, Institution
+		XXX University,
+		Address}
+	
+	\email{authoremail}
+	
+	\begin{precis}
+		\lipsum[1][1]\par
+	\end{precis}
+	
+	
+	\begin{abstract}
+		
+		
+		\absdiv{Objective:}	\lipsum[1][1]\par
+		
+		\absdiv{Background:} \lipsum[1][1]\par
+		
+		\absdiv{Methods:} \lipsum[1][1]\par
+		
+		\absdiv{Results:} \lipsum[1][1]\par
+		
+		\absdiv{Conclusion:} \lipsum[1][1]\par
+		
+		\absdiv{Application:} \lipsum[1][1]\par
+		
+		
+	\end{abstract}
+	
+	
+	
+	
+	\keywords{key-1, key-2, key-3, key-4, key-5}
+	
+	
+	\maketitle	
+	
+	\doublespacing % remove this line to reduce space between lines
+	\onecolumn % remove this line to make the article double column
+	\section{Section-1}
+	
+	\lipsum[1-1]
+
+	\section{Section-2}
+	
+	\lipsum[1-1]
+	
+	\section{Key Points}
+	\begin{itemize}
+		\item \lipsum[1][1]\par
+		\item \lipsum[1][1]\par
+		\item \lipsum[1][1]\par
+	\end{itemize}
+	
+	
+	%
+	\begin{acks}
+		\lipsum[1-1]
+	\end{acks}
+	
+	\begin{thebibliography}{99}
+		\bibitem[Kopka and Daly(2003)]{R1}
+		Kopka~H and Daly~PW (2003) \textit{A Guide to \LaTeX}, 4th~edn.
+		Addison-Wesley.
+		
+		\bibitem[Lamport(1994)]{R2}
+		Lamport~L (1994) \textit{\LaTeX: a Document Preparation System},
+		2nd~edn. Addison-Wesley.
+		
+		\bibitem[Mittelbach and Goossens(2004)]{R3}
+		Mittelbach~F and Goossens~M (2004) \textit{The \LaTeX\ Companion},
+		2nd~edn. Addison-Wesley.
+		
+	\end{thebibliography}
+	\newpage
+
+	\section{Author Biographies}
+	
+	Author-1
+	
+	\noindent Author-2
+	
+	\noindent Author-3
+	
+	\newpage
+	\setcounter{page}{1}
+	\section{Supplementary}\label{Supplementary}
+	\subsection{Appendix A}
+	\lipsum[1-1]
+	
+	\begin{figure*}[!hb]
+		%	\begin{multicols}{2}
+			\centering
+			\includegraphics[width=\linewidth]{Supplementary-Material-Figure-14-zoom1}
+			\caption{Example showing recurrence plot of $r_k$ for strategic and non-strategic trial shown in left and right plot, respectively. Where, $r_k$ represents autocorrelation transformation of re-ordered categorical gaze data $g_c$. And, the threshold employed. For more detail, a section the highlighted section is further zoomed in figures.~\ref{fig:z2} and \ref{fig:z3}}
+			\label{fig:z1}
+			%	\end{multicols}
+	\end{figure*}
+	
+	
+	
+	\subsection{Appendix B}
+\lipsum[1-1]
+	
+	\subsection{Appendix C}
+\lipsum[1-1]
+	
+	
+\end{document}
